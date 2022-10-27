@@ -1,0 +1,21 @@
+name: 'Merigo Unity SDK Release uploader to S3'
+description: 'Upload release files to S3'
+inputs:
+  uploadedFolderName:  
+    description: 'Name of the folder'
+    required: true
+  folder:  
+    description: 'Name of the folder to upload from'
+    required: true
+  bucket:  
+    description: 'S3 bucket to upload'
+    required: true
+  allowFolderOverwrite:  
+    description: 'Allow to overwrite existing release'
+    required: false
+branding:
+  icon: 'arrow-up'
+  color: 'yellow'
+runs:
+  using: 'node16'
+  main: 'index.js'
