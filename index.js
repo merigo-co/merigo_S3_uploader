@@ -45,7 +45,7 @@ try {
                                     Body: content
                                 }));
                                 if (response['$metadata'].httpStatusCode != 200) {
-                                    rejectFile(response['$metadata'].httpStatusCode + "sdfdsdfsa")
+                                    rejectFile(response['$metadata'].httpStatusCode)
                                     return;
                                 }
                                 resolveFile(response['$metadata'].httpStatusCode);
@@ -71,6 +71,6 @@ try {
     console.log(err)
     core.setFailed(err.message)
 }
-console.log(`Unity SDK files uploaded successfully under this folder: ${uploadedFolderName}! :)`)
+console.log(`Files uploaded successfully under this folder: ${uploadedFolderName}! :)`)
 
 
