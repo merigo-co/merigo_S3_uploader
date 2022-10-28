@@ -51353,7 +51353,7 @@ async function checkFolderExist(uploadedFolderName) {
                                 try {
                                     const response = await client.send(new PutObjectCommand({
                                         Bucket: bucket,
-                                        Key: "foldertest/" + filename,
+                                        Key:  uploadedFolderName + "/" + filename,
                                         Body: content
                                     }));
                                     if (response['$metadata'].httpStatusCode != 200) {
